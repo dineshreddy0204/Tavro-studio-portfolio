@@ -14,7 +14,6 @@
 - **Instagram:** [instagram.com/tavrostudio.in](https://www.instagram.com/tavrostudio.in/)
 - **LinkedIn:** [linkedin.com/in/dinesh-reddy-pallem](https://www.linkedin.com/in/dinesh-reddy-pallem)
 - **GitHub:** [github.com/dineshreddy0204](https://github.com/dineshreddy0204)
-- **Target Domain:** `tavrostudio.in` (Deployment configured for Hostinger)
 
 ---
 
