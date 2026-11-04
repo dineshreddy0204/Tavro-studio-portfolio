@@ -40,7 +40,7 @@
    - 04 — Launch & Optimize
 7. **The Portal:** Perspective tunnel transition leading directly into project inquiry.
 8. **Inquiry Protocol & Contact:** High-conversion form with real-time validation, WhatsApp number input, server-side persistence (`/api/inquiries`), direct WhatsApp dispatch (`https://wa.me/916301422287`), and email client integration (`dineshreddy02a@gmail.com`).
-9. **Executive Admin Control Portal (`/admin`):** Secure dashboard protected by master password (`tavro2026` or environment variable) to manage client inquiries, portfolio projects, and agency services with zero external dependencies.
+9. **Executive Admin Control Portal (`/admin`):** Secure dashboard protected by master password  to manage client inquiries, portfolio projects, and agency services with zero external dependencies.
 
 ---
 
@@ -57,7 +57,7 @@ node server.js
 ```
 
 - Public Website: [http://localhost:8000/](http://localhost:8000/)
-- Admin Control Portal: [http://localhost:8000/admin](http://localhost:8000/admin) (Master Key: `tavro2026`)
+- Admin Control Portal: [http://localhost:8000/admin](http://localhost:8000/admin) 
 
 ---
 
