@@ -1,0 +1,11 @@
+# Media is not included in this repository
+assets/
+*.mp4
+*.webp
+*.wav
+showcase/track.json
+__pycache__/
+node_modules/
+*.log
+.DS_Store
+Thumbs.db

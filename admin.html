@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TAVRO STUDIO — Admin Control Portal</title>
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23060608'/><path d='M8 9h16v3.5h-6.2v11h-3.6v-11H8V9z' fill='%23c5a880'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;850&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body>
+
+  <!-- Authentication Screen -->
+  <div class="auth-wrapper" id="authWrapper">
+    <div class="auth-card">
+      <div class="auth-header">
+        <div class="brand-monogram">T</div>
+        <h1 class="brand-title">TAVRO STUDIO</h1>
+        <span class="brand-sub">Executive Administration Portal</span>
+      </div>
+
+      <form class="auth-form" id="loginForm">
+        <div class="field-group">
+          <label for="adminPassword">Master Security Key</label>
+          <input type="password" id="adminPassword" placeholder="Enter admin password" required
+            autocomplete="current-password">
+          <span class="auth-hint">Default development key: <code>dineshreddy@02</code></span>
+        </div>
+        <button type="submit" class="btn-primary" id="loginBtn">Authenticate &amp; Enter</button>
+        <div class="auth-error" id="authError" role="alert"></div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Main Admin Dashboard -->
+  <div class="dashboard-wrapper" id="dashboardWrapper" style="display: none;">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <span class="logo">TAVRO STUDIO<sup>®</sup></span>
+        <span class="tag">CONTROL PORTAL</span>
+      </div>
+
+      <nav class="sidebar-nav">
+        <button class="nav-item active" data-tab="inquiries">
+          <span class="icon">📨</span>
+          <span>Client Inquiries</span>
+          <span class="badge" id="inquiriesCount">0</span>
+        </button>
+        <button class="nav-item" data-tab="projects">
+          <span class="icon">💼</span>
+          <span>Project Portfolio</span>
+          <span class="badge" id="projectsCount">0</span>
+        </button>
+        <button class="nav-item" data-tab="services">
+          <span class="icon">⚙️</span>
+          <span>Agency Capabilities</span>
+        </button>
+        <button class="nav-item" data-tab="deployment">
+          <span class="icon">🚀</span>
+          <span>Hostinger Deployment</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a href="/" target="_blank" class="btn-site-link">View Public Website ↗</a>
+        <button class="btn-logout" id="logoutBtn">Log Out</button>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+
+      <!-- Topbar -->
+      <header class="topbar">
+        <div class="topbar-title">
+          <h2 id="currentTabTitle">Client Inquiries</h2>
+          <span class="topbar-sub">Manage inbound business leads and project requests</span>
+        </div>
+        <div class="topbar-status">
+          <span class="pulse-indicator"></span>
+          <span class="status-text">Production Server Connected</span>
+        </div>
+      </header>
+
+      <div class="content-body">
+
+        <!-- ================= INQUIRIES TAB ================= -->
+        <section class="tab-pane active" id="tab-inquiries">
+          <div class="pane-header">
+            <h3>Inbound Project Requests</h3>
+            <p>Real-time inquiries submitted directly via the website contact form.</p>
+          </div>
+
+          <div class="table-responsive">
+            <table class="data-table" id="inquiriesTable">
+              <thead>
+                <tr>
+                  <th>Date / Time</th>
+                  <th>Client Name</th>
+                  <th>Business / Brand</th>
+                  <th>Contact</th>
+                  <th>Project Type</th>
+                  <th>Pricing / Scope</th>
+                  <th>Scope Summary</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="inquiriesTableBody">
+                <tr>
+                  <td colspan="8" class="text-center empty-state">No inquiries registered yet. Submissions from the
+                    contact form will appear here.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- ================= PROJECTS TAB ================= -->
+        <section class="tab-pane" id="tab-projects">
+          <div class="pane-header flex-between">
+            <div>
+              <h3>Portfolio Showcase Management</h3>
+              <p>Update live client URLs, manage categories, and add new flagship cases.</p>
+            </div>
+            <button class="btn-primary btn-sm" id="btnOpenNewProject">＋ Add New Project</button>
+          </div>
+
+          <div class="projects-grid" id="projectsList">
+            <!-- Dynamically populated -->
+          </div>
+
+          <!-- Add / Edit Project Modal -->
+          <div class="admin-modal" id="projectModal" style="display: none;">
+            <div class="modal-box">
+              <div class="modal-box-header">
+                <h4 id="projectModalTitle">Add Project</h4>
+                <button class="modal-close-x" id="btnCloseProjectModal">×</button>
+              </div>
+              <form id="projectForm" class="modal-form">
+                <input type="hidden" id="projId">
+                <div class="form-row">
+                  <div class="field">
+                    <label for="projName">Client / Project Name</label>
+                    <input type="text" id="projName" required placeholder="e.g. Dazzlinglooks">
+                  </div>
+                  <div class="field">
+                    <label for="projCategory">Category</label>
+                    <input type="text" id="projCategory" required placeholder="e.g. Beauty E-commerce">
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="field">
+                    <label for="projLiveUrl">Live Website URL</label>
+                    <input type="url" id="projLiveUrl" placeholder="https://www.dazzlinglooks.in/">
+                  </div>
+                  <div class="field">
+                    <label for="projStatus">Project Status</label>
+                    <select id="projStatus">
+                      <option value="Live">Live</option>
+                      <option value="Pending Client Launch">Pending Client Launch</option>
+                      <option value="Under Development">Under Development</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label for="projTagline">Tagline</label>
+                  <input type="text" id="projTagline" placeholder="e.g. High-Conversion Luxury Beauty Flagship">
+                </div>
+
+                <div class="field">
+                  <label for="projDesc">Description</label>
+                  <textarea id="projDesc" rows="3" required
+                    placeholder="Brief description of the platform..."></textarea>
+                </div>
+
+                <div class="field">
+                  <label for="projTech">Technologies (comma separated)</label>
+                  <input type="text" id="projTech" placeholder="Shopify Plus, Next.js, Tailwind CSS, WebGL">
+                </div>
+
+                <div class="modal-actions">
+                  <button type="button" class="btn-ghost" id="btnCancelProject">Cancel</button>
+                  <button type="submit" class="btn-primary">Save Project</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= SERVICES TAB ================= -->
+        <section class="tab-pane" id="tab-services">
+          <div class="pane-header">
+            <h3>Agency Service Offerings</h3>
+            <p>8 core capabilities delivered to enterprise and growing brand clients.</p>
+          </div>
+
+          <div class="services-admin-grid" id="servicesList">
+            <!-- Dynamically populated from data/services.json -->
+          </div>
+        </section>
+
+        <!-- ================= HOSTINGER DEPLOYMENT TAB ================= -->
+        <section class="tab-pane" id="tab-deployment">
+          <div class="pane-header">
+            <h3>Hostinger Production Deployment Guide</h3>
+            <p>Instructions for deploying TAVRO Studio to Hostinger and configuring <code>tavrostudio.in</code>.</p>
+          </div>
+
+          <div class="deployment-card">
+            <h4>Deployment Architecture</h4>
+            <p>TAVRO Studio is built with native Node.js (zero external dependencies) and standard modern frontend
+              assets. It can be hosted on:</p>
+            <ul class="dep-list">
+              <li><strong>Hostinger Cloud / VPS Hosting</strong> (Recommended for maximum speed, Node.js daemon support,
+                and automated Git hooks).</li>
+              <li><strong>Hostinger Web Hosting (with Node.js selector)</strong> via cPanel / hPanel.</li>
+            </ul>
+
+            <h4 style="margin-top: 24px;">Quick Deployment Steps</h4>
+            <ol class="dep-steps">
+              <li><strong>Upload Project Files:</strong> Upload the <code>freefall-portfolio-code-main</code> folder to
+                your Hostinger server public root or app directory via Git or File Manager.</li>
+              <li><strong>Configure Node.js Application in hPanel:</strong>
+                <ul>
+                  <li>Application Root: <code>public_html</code> (or custom path)</li>
+                  <li>Application Startup File: <code>server.js</code></li>
+                  <li>Node.js Version: <code>18.x</code> or <code>20.x</code> or <code>22.x</code></li>
+                </ul>
+              </li>
+              <li><strong>Environment Variables (Optional):</strong>
+                <ul>
+                  <li><code>PORT</code>: Assigned automatically by Hostinger, defaults to 8000.</li>
+                  <li><code>ADMIN_PASSWORD</code>: Your custom secure master password for this admin panel.</li>
+                </ul>
+              </li>
+              <li><strong>Map Custom Domain (<code>tavrostudio.in</code>):</strong> Once purchased, assign the domain to
+                this website in Hostinger DNS and enable Free Let's Encrypt SSL.</li>
+            </ol>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <script src="js/admin.js"></script>
+</body>
+
+</html>

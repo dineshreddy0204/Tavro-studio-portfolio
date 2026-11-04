@@ -1,0 +1,98 @@
+[
+  {
+    "id": "strategic-web-design",
+    "num": "01",
+    "name": "Strategic Website Design & Development",
+    "description": "Bespoke digital platforms, corporate websites, and interactive brand hubs engineered from scratch with clean semantic code, fluid animations, and robust CMS backends.",
+    "deliverables": [
+      "Custom Frontend & Backend Architecture",
+      "60fps Motion Choreography",
+      "Semantic SEO Optimization",
+      "Sub-Second Core Web Vitals"
+    ]
+  },
+  {
+    "id": "ecommerce-development",
+    "num": "02",
+    "name": "E-commerce Development",
+    "description": "Scalable, high-conversion online stores tailored to your business model. From bespoke Shopify Plus themes to headless commerce architectures with frictionless global checkouts.",
+    "deliverables": [
+      "Shopify Plus & Headless Storefronts",
+      "Frictionless Cart Drawers & One-Page Checkout",
+      "Global Multi-Currency & Automated Tax Setup",
+      "Inventory & ERP System Integrations"
+    ]
+  },
+  {
+    "id": "ui-ux-design",
+    "num": "03",
+    "name": "UI/UX Design",
+    "description": "Research-backed user experience and visually arresting user interfaces. We map customer journeys, create comprehensive design systems, and prototype every interaction down to the microsecond.",
+    "deliverables": [
+      "Comprehensive Design Systems & Tokens",
+      "Interactive Wireframing & Prototyping",
+      "User Journey & Conversion Funnel Audits",
+      "Micro-Interactions & Visual Guidelines"
+    ]
+  },
+  {
+    "id": "business-websites",
+    "num": "04",
+    "name": "Business Websites",
+    "description": "High-credibility corporate and commercial web platforms built to command authority, establish category leadership, and convert enterprise prospects into qualified inbound leads.",
+    "deliverables": [
+      "Brand Authority Presentation",
+      "Lead Capture & CRM Integrations",
+      "Interactive Case Studies & Portfolios",
+      "Enterprise Grade Security & Compliance"
+    ]
+  },
+  {
+    "id": "landing-page-development",
+    "num": "05",
+    "name": "Landing Page Development",
+    "description": "High-velocity campaign and product landing pages engineered specifically for paid acquisition, marketing launches, and maximum conversion rates.",
+    "deliverables": [
+      "A/B Testing Architecture",
+      "Lightning Fast Mobile Load Speeds",
+      "Persuasive Editorial Storytelling",
+      "Direct Attribution & Pixel Tracking"
+    ]
+  },
+  {
+    "id": "web-application-development",
+    "num": "06",
+    "name": "Web Application Development",
+    "description": "Modern full-stack web applications, portals, and software platforms engineered using modern frameworks with reactive state management and scalable APIs.",
+    "deliverables": [
+      "Next.js / React Full-Stack Architecture",
+      "Secure Role-Based Authentication & Permissions",
+      "Real-Time Database & Cloud Storage",
+      "RESTful & GraphQL API Endpoints"
+    ]
+  },
+  {
+    "id": "website-maintenance",
+    "num": "07",
+    "name": "Website Maintenance",
+    "description": "Proactive 24/7 technical monitoring, security patching, speed optimization, and regular feature updates to keep your digital platform operating at peak efficiency.",
+    "deliverables": [
+      "Continuous Core Web Vitals Audits",
+      "Security Patches & Vulnerability Scanning",
+      "Daily Automated Cloud Backups",
+      "Priority SLA Feature Updates"
+    ]
+  },
+  {
+    "id": "custom-digital-solutions",
+    "num": "08",
+    "name": "Custom Digital Solutions",
+    "description": "Tailored digital engineering to solve complex operational challenges, automate internal workflows, connect third-party platforms, and unlock new revenue streams.",
+    "deliverables": [
+      "Custom Workflow Automation",
+      "Third-Party API & Webhook Integrations",
+      "Headless CMS & Custom Admin Dashboards",
+      "Custom Analytics & Reporting Infrastructure"
+    ]
+  }
+]

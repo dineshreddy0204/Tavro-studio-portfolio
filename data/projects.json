@@ -1,0 +1,27 @@
+[
+  {
+    "id": "dazzlinglooks",
+    "num": "01",
+    "name": "Dazzlinglooks",
+    "category": "Beauty E-commerce",
+    "tagline": "High-Conversion Luxury Beauty Flagship",
+    "description": "Premium beauty e-commerce website engineered for an emerging luxury cosmetics brand. Focused on fluid product discovery, interactive shade matching, high-speed mobile checkout, and editorial brand storytelling.",
+    "liveUrl": "https://www.dazzlinglooks.in/",
+    "status": "Live",
+    "services": [
+      "Strategic Website Design & Development",
+      "E-commerce Development",
+      "UI/UX Design",
+      "Conversion Rate Optimization"
+    ],
+    "technologies": [
+      "Shopify Plus / Hydrogen",
+      "Next.js",
+      "Tailwind CSS",
+      "WebGL",
+      "Framer Motion"
+    ],
+    "year": "2026",
+    "accentColor": "#c5a880"
+  }
+]

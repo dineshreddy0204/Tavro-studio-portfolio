@@ -1,0 +1,978 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>TAVRO® STUDIO — Premium Digital Agency | Strategic Web &amp; E-commerce</title>
+<meta name="description" content="Strategic Web Design &amp; Development · E-commerce &amp; Digital Innovation · Transforming Vision into Business Impact · Built on Trust. Driven by Excellence.">
+<meta name="theme-color" content="#060608">
+<meta name="robots" content="index, follow">
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23060608'/><path d='M8 9h16v3.5h-6.2v11h-3.6v-11H8V9z' fill='%23c5a880'/></svg>">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Core Stylesheet -->
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="is-locked">
+
+<!-- ============ PRELOADER ============ -->
+<div class="loader" id="loader" role="dialog" aria-modal="true" aria-label="Loading TAVRO STUDIO">
+  <div class="loader-content">
+    <div class="loader-brand">
+      <span class="loader-logo">TAVRO STUDIO</span>
+      <span class="loader-sub">Premium Digital Agency</span>
+    </div>
+    <div class="loader-shaft" aria-hidden="true"><i id="loadFill"></i></div>
+    <div class="loader-status">
+      <span class="loader-readout">Initializing Studio Architecture...</span>
+      <span class="loader-pct"><span id="loadPct">0</span>%</span>
+    </div>
+  </div>
+  <div class="loader-actions">
+    <button class="btn btn--solid magnet" data-enter="sound" data-cursor="Enter">
+      <span>Enter with sound</span>
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg>
+    </button>
+    <button class="btn magnet" data-enter="mute" data-cursor="Enter">
+      <span>Enter silently</span>
+    </button>
+  </div>
+</div>
+
+<!-- ============ NAVIGATION CHROME ============ -->
+<header class="nav" id="mainNav">
+  <button class="nav-menu magnet" id="menuBtn" aria-expanded="false" aria-controls="menu" data-cursor="Menu">
+    <span class="nav-menu-icon" aria-hidden="true"><i></i><i></i></span>
+    <span class="nav-menu-text">Menu</span>
+  </button>
+  
+  <a class="nav-mark magnet" href="#top" data-jump="top" data-cursor="Top">
+    <strong>TAVRO STUDIO<sup>®</sup></strong>
+    <em>Premium Digital Agency</em>
+  </a>
+  
+  <div class="nav-right">
+    <button class="nav-sound magnet" id="soundBtn" aria-pressed="false" data-cursor="Sound" title="Toggle Studio Audio">
+      <i class="bars" aria-hidden="true"><b></b><b></b><b></b><b></b></i>
+      <span>Sound off</span>
+    </button>
+    <a class="nav-talk magnet btn btn--nav" href="#contact" data-jump="contact" data-cursor="Inquire">
+      <span>Start a Project</span>
+    </a>
+  </div>
+</header>
+
+<!-- ============ FULLSCREEN MENU OVERLAY ============ -->
+<nav class="menu" id="menu" aria-hidden="true">
+  <div class="menu-container">
+    <div class="menu-nav-col">
+      <span class="menu-kicker">Navigation Index</span>
+      <ol class="menu-list">
+        <li><a href="#top" data-jump="top" data-img="hero"><span>01</span><em>Overview</em></a></li>
+        <li><a href="#work" data-jump="work" data-img="work"><span>02</span><em>Selected Work</em></a></li>
+        <li><a href="#studio" data-jump="studio" data-img="studio"><span>03</span><em>Our Studio</em></a></li>
+        <li><a href="#services" data-jump="services" data-img="services"><span>04</span><em>Capabilities</em></a></li>
+        <li><a href="#process" data-jump="process" data-img="process"><span>05</span><em>Our Process</em></a></li>
+        <li><a href="#contact" data-jump="contact" data-img="contact"><span>06</span><em>Start a Project</em></a></li>
+      </ol>
+    </div>
+    
+    <div class="menu-info-col">
+      <div class="menu-preview" aria-hidden="true">
+        <div class="menu-preview-inner" id="menuPreviewContent">
+          <span class="mp-tag">TAVRO STUDIO // 2026</span>
+          <h4 class="mp-title">Bespoke Digital Experiences</h4>
+          <p class="mp-desc">Crafted for ambitious businesses and growing modern brands.</p>
+        </div>
+      </div>
+      
+      <div class="menu-contact-snippet">
+        <span class="snippet-label">Direct Communication</span>
+        <a href="mailto:dineshreddy02a@gmail.com" class="snippet-email">dineshreddy02a@gmail.com</a>
+        <a href="https://wa.me/916301422287" target="_blank" rel="noopener noreferrer" class="snippet-email" style="font-size:13px; color:#27c93f; margin-top:4px;">WA: +91 6301422287 ↗</a>
+        <div class="snippet-meta">
+          <span>Global Studio // India HQ</span>
+          <span id="menuClock">--:--</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="menu-foot">Press <kbd>Esc</kbd> or click outside to return</p>
+</nav>
+
+<!-- ============ PERSISTENT HUD ============ -->
+<div class="hud" aria-hidden="true">
+  <div class="hud-chapter">
+    <span class="hud-num">01</span>
+    <span class="hud-name">Hero</span>
+  </div>
+  <div class="hud-bar"><i id="hudProgress"></i></div>
+  <div class="hud-read" id="hudContext">EST. 2026 // DIGITAL AGENCY</div>
+</div>
+
+<!-- ============ AMBIENT GRAIN ============ -->
+<div class="grain" aria-hidden="true"></div>
+
+<!-- =========================================================
+     MAIN CONTENT WRAPPER
+     ========================================================= -->
+<main id="top">
+
+  <!-- ============ 1. HERO SECTION (KINETIC EXPERIENCE) ============ -->
+  <section class="story" id="story" aria-label="TAVRO Studio Experience">
+    <div class="stage">
+      <div class="stage-inner" id="stageInner">
+        
+        <!-- Ambient & Generative 3D Canvas Layer -->
+        <canvas class="ambient" id="ambient" aria-hidden="true"></canvas>
+        <div class="film" id="film">
+          <canvas id="filmCanvas" aria-label="Interactive generative digital architecture visualizer"></canvas>
+        </div>
+        <div class="vignette" aria-hidden="true"></div>
+
+        <!-- 3D Perspective Realms -->
+        <div class="world world--back" aria-hidden="true"><div class="cam"></div></div>
+        
+        <div class="index-name" aria-hidden="true">TAVRO STUDIO</div>
+
+        <!-- 3D Floating Project / Capability Nodes -->
+        <div class="index-tiles" id="tiles" aria-hidden="true">
+          <div class="tile tile--agency" data-x="-.32" data-y="-.22" data-s=".22" data-ar="1.3" data-z="-120" data-d="0">
+            <div class="tile-inner">
+              <span class="t-badge">E-COMMERCE</span>
+              <strong class="t-title">Dazzlinglooks</strong>
+              <span class="t-desc">Beauty Commerce Flagship</span>
+            </div>
+          </div>
+          <div class="tile tile--agency" data-x=".32" data-y="-.24" data-s=".20" data-ar=".9" data-z="-60" data-d=".08">
+            <div class="tile-inner">
+              <span class="t-badge">FLAGSHIP CASE</span>
+              <strong class="t-title">Dazzlinglooks.in</strong>
+              <span class="t-desc">Luxury E-commerce</span>
+            </div>
+          </div>
+          <div class="tile tile--agency" data-x="-.34" data-y=".20" data-s=".16" data-ar="1" data-z="40" data-d=".18">
+            <div class="tile-inner">
+              <span class="t-badge">CORE STACK</span>
+              <strong class="t-title">Next.js &amp; Shopify</strong>
+              <span class="t-desc">Headless Velocity</span>
+            </div>
+          </div>
+          <div class="tile tile--agency" data-x=".34" data-y=".21" data-s=".18" data-ar="1.1" data-z="-20" data-d=".12">
+            <div class="tile-inner">
+              <span class="t-badge">UI/UX CRAFT</span>
+              <strong class="t-title">Design Systems</strong>
+              <span class="t-desc">Bespoke Interactions</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="world world--front" aria-hidden="true"><div class="cam"></div></div>
+        <div class="world world--ui"><div class="cam"></div></div>
+
+        <!-- Kinetic Typography Accent -->
+        <div class="rise" aria-hidden="true">
+          <span>T</span><span>A</span><span>V</span><span>R</span><span>O</span>
+        </div>
+        <div class="shock" aria-hidden="true"></div>
+
+        <!-- HERO EDITORIAL OVERLAY -->
+        <div class="hero" id="hero">
+          <div class="hero-top-badge">
+            <span class="pulse-dot"></span>
+            <span>TAVRO STUDIO // PREMIUM DIGITAL AGENCY</span>
+          </div>
+
+          <div class="hero-center">
+            <h1 class="hero-headline" aria-label="We Build Digital Experiences That Move Businesses Forward.">
+              <span class="hero-line">We Build Digital</span>
+              <span class="hero-line">Experiences That Move</span>
+              <span class="hero-line hero-line--em">Businesses Forward.</span>
+            </h1>
+
+            <p class="hero-supporting">
+              We transform ambitious business ideas into powerful digital experiences through strategy, design and technology.
+            </p>
+
+            <div class="hero-cta-group">
+              <a class="btn btn--solid magnet" href="#work" data-jump="work" data-cursor="Explore">
+                <span>Explore Our Work</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </a>
+              <a class="btn btn--glass magnet" href="#contact" data-jump="contact" data-cursor="Inquire">
+                <span>Start a Project</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-foot">
+            <button class="hero-cue magnet" data-jump="work" data-cursor="Scroll">
+              <span>Scroll to explore</span>
+              <i aria-hidden="true"></i>
+            </button>
+            <div class="hero-meta">
+              <span>EST. 2026 // TAVRO STUDIO<sup>®</sup></span>
+              <span>STRATEGIC WEB · COMMERCE · INNOVATION</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flash" aria-hidden="true"><b>IMPACT</b></div>
+        <div class="flash flash--ember" aria-hidden="true"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 2. SELECTED WORK (MOST IMPORTANT SECTION) ============ -->
+  <section class="work" id="work" aria-label="Selected Client Work">
+    <div class="work-sticky-header">
+      <div class="work-header-inner">
+        <span class="section-kicker">SELECTED WORK // FEATURED FLAGSHIP</span>
+        <h2 class="section-title">Built for Performance. Crafted for Scale.</h2>
+        <p class="section-desc">A bespoke luxury beauty e-commerce flagship engineered by TAVRO STUDIO for high conversion, brand prestige, and seamless global shopping.</p>
+      </div>
+    </div>
+
+    <!-- Cinematic Stacking Cases Container -->
+    <div class="work-stage" id="workStage">
+
+      <!-- ===== CASE 01: DAZZLINGLOOKS ===== -->
+      <article class="screen screen--case" id="case-dazzlinglooks" style="--c: var(--accent-gold); --dim: 0;">
+        <header class="screen-bar">
+          <span class="sb-tag">FEATURED CASE</span>
+          <span class="sb-client">Dazzlinglooks — Luxury Beauty E-commerce</span>
+          <span class="sb-year">dazzlinglooks.in</span>
+        </header>
+
+        <!-- Dynamic Kinetic Backdrop -->
+        <div class="screen-title" aria-hidden="true">
+          <span>DAZZLINGLOOKS&nbsp; DAZZLINGLOOKS&nbsp; DAZZLINGLOOKS&nbsp;</span>
+        </div>
+
+        <!-- High-Resolution Device Showcase (Desktop & Mobile) -->
+        <div class="mockup-stage" aria-label="Dazzlinglooks Project Previews">
+          
+          <!-- Desktop Browser Mockup Frame -->
+          <div class="mockup-desktop">
+            <div class="mockup-window-bar">
+              <div class="mockup-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+              <div class="mockup-url-bar">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                <span>dazzlinglooks.in</span>
+                <span class="mockup-url-badge" style="background: rgba(39, 201, 63, 0.2); color: #27c93f;">LIVE</span>
+              </div>
+              <div class="mockup-status-dot" aria-hidden="true"></div>
+            </div>
+
+            <!-- Client Preview Screen Container -->
+            <div class="mockup-viewport">
+              <div class="client-ui client-ui--beauty">
+                <div class="cui-nav">
+                  <span class="cui-brand">DAZZLINGLOOKS PARIS</span>
+                  <div class="cui-links">
+                    <span>COLLECTIONS</span>
+                    <span>RADIANT FORMULAS</span>
+                    <span>SHADE FINDER</span>
+                    <span>JOURNAL</span>
+                  </div>
+                  <div class="cui-actions">
+                    <span class="cui-action-btn">SEARCH</span>
+                    <span class="cui-bag">BAG (2)</span>
+                  </div>
+                </div>
+
+                <div class="cui-hero">
+                  <div class="cui-hero-text">
+                    <span class="cui-kicker">THE 2026 FOUNDATION SUITE</span>
+                    <h3 class="cui-title">Luminous Skin. Architectural Pigment.</h3>
+                    <p class="cui-copy">38 adaptive micro-tones engineered for 24-hour hydration and weightless camera-ready radiance.</p>
+                    <div class="cui-cta-row">
+                      <span class="cui-btn-primary">DISCOVER THE FORMULA — $78</span>
+                      <span class="cui-btn-ghost">TAKE SHADE QUIZ</span>
+                    </div>
+                  </div>
+                  <div class="cui-hero-visual">
+                    <div class="cui-serum-bottle">
+                      <div class="cui-bottle-cap"></div>
+                      <div class="cui-bottle-glass">
+                        <div class="cui-liquid-glow"></div>
+                        <span class="cui-bottle-label">DAZZLINGLOOKS<br><em>Sérum Lumineux</em></span>
+                      </div>
+                    </div>
+                    <div class="cui-swatches">
+                      <i style="background:#f7e2d0;" class="active"></i>
+                      <i style="background:#ebd1be;"></i>
+                      <i style="background:#d9b89c;"></i>
+                      <i style="background:#af8662;"></i>
+                      <i style="background:#6d482d;"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="cui-watermark">
+                  <span>[ PRODUCTION FLAGSHIP — VISIT LIVE AT DAZZLINGLOOKS.IN ]</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Companion Mobile Device Mockup -->
+          <div class="mockup-mobile">
+            <div class="mobile-speaker" aria-hidden="true"></div>
+            <div class="mobile-viewport">
+              <div class="mobile-ui mobile-ui--beauty">
+                <div class="m-nav">
+                  <span class="m-menu-icon"></span>
+                  <span class="m-brand">DAZZLINGLOOKS</span>
+                  <span class="m-bag">🛍️</span>
+                </div>
+                <div class="m-card">
+                  <div class="m-img-placeholder">
+                    <span>SHADE FINDER 2.0</span>
+                  </div>
+                  <strong class="m-prod-name">Radiant Silk Foundation</strong>
+                  <span class="m-prod-price">$78.00 USD</span>
+                  <div class="m-swatch-row">
+                    <span style="background:#f7e2d0;" class="is-selected"></span>
+                    <span style="background:#ebd1be;"></span>
+                    <span style="background:#d9b89c;"></span>
+                  </div>
+                  <button class="m-btn-buy" type="button">Quick Add to Bag</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Project Narrative & Metadata Card -->
+        <div class="screen-meta">
+          <div class="meta-badge-row">
+            <span class="badge badge--cat">Beauty E-commerce</span>
+            <span class="badge badge--year" style="color: #27c93f; border-color: rgba(39, 201, 63, 0.3);">dazzlinglooks.in</span>
+          </div>
+
+          <h3 class="meta-title">Dazzlinglooks Flagship</h3>
+          
+          <p class="meta-desc">
+            A bespoke e-commerce platform engineered for an emerging luxury cosmetics brand. Focused on fluid product discovery, interactive shade matching, high-speed mobile checkout, and editorial brand storytelling.
+          </p>
+
+          <div class="meta-specs">
+            <div class="spec-block">
+              <span class="spec-label">Services Delivered</span>
+              <ul class="spec-pills">
+                <li>Website Design &amp; Development</li>
+                <li>E-commerce Architecture</li>
+                <li>UI/UX Design</li>
+                <li>Performance Optimization</li>
+              </ul>
+            </div>
+            
+            <div class="spec-block">
+              <span class="spec-label">Technologies Used</span>
+              <ul class="spec-pills spec-pills--tech">
+                <li>Shopify Plus / Hydrogen</li>
+                <li>Next.js 15</li>
+                <li>Tailwind CSS</li>
+                <li>WebGL</li>
+                <li>Framer Motion</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="meta-actions">
+            <a class="btn btn--solid magnet preview-link-btn" href="https://dazzlinglooks.in" target="_blank" rel="noopener noreferrer" data-cursor="Visit" data-client="Dazzlinglooks">
+              <span>Visit Live Website</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            </a>
+            <a class="btn btn--glass magnet" href="#contact" data-jump="contact" data-project-type="E-commerce Development" data-cursor="Inquire">
+              <span>Start a Similar Project</span>
+            </a>
+          </div>
+
+          <span class="screen-mark" aria-hidden="true">01</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============ 3. OUR STUDIO ============ -->
+  <section class="about" id="studio" aria-label="About TAVRO STUDIO">
+    <div class="studio-header">
+      <span class="section-kicker">OUR STUDIO // AGENCY ETHOS</span>
+      <h2 class="studio-headline">Built for Brands.<br><em>Driven by Business.</em></h2>
+    </div>
+
+    <!-- Word-by-Word Illuminating Manifesto on Scroll -->
+    <p class="manifesto" id="manifesto">
+      We create modern digital experiences that help businesses establish their online presence, build unshakeable brand equity, and turn curious visitors into loyal customers. No fragile templates. No generic layouts. Every line of code, interaction, and design decision is engineered to elevate your brand and accelerate commercial growth.
+    </p>
+
+    <!-- Agency Pillars & Commercial Proof -->
+    <div class="about-cols">
+      <div class="about-card">
+        <span class="card-num">01</span>
+        <h4>Strategic Brand Distinction</h4>
+        <p>In crowded global markets, conventional design is invisible. We create bespoke digital identities and immersive interfaces that demand attention, foster credibility, and position your brand as an undisputed industry leader.</p>
+      </div>
+
+      <div class="about-card">
+        <span class="card-num">02</span>
+        <h4>Commercial Performance &amp; Scale</h4>
+        <p>A website must be more than art; it is a revenue engine. Every user journey, button placement, micro-interaction, and checkout step is calibrated for maximum conversion rate, user retention, and frictionless transaction speed.</p>
+      </div>
+    </div>
+
+    <!-- Studio Statistics & Principles -->
+    <div class="studio-metrics-grid">
+      <div class="metric-item">
+        <strong class="metric-val">100%</strong>
+        <span class="metric-lbl">Bespoke Architectural Code</span>
+      </div>
+      <div class="metric-item">
+        <strong class="metric-val">0</strong>
+        <span class="metric-lbl">Clunky Off-the-Shelf Templates</span>
+      </div>
+      <div class="metric-item">
+        <strong class="metric-val">&lt;0.8s</strong>
+        <span class="metric-lbl">Average Core Web Vitals Render</span>
+      </div>
+      <div class="metric-item">
+        <strong class="metric-val">Global</strong>
+        <span class="metric-lbl">Multi-Currency &amp; Global Delivery</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Studio Capability Marquee -->
+  <div class="marquee" aria-label="Core Technology Partners and Capabilities">
+    <div class="marquee-row" data-dir="-1">
+      <div class="marquee-track">
+        <span>Shopify Plus</span>
+        <span class="o">Next.js 15</span>
+        <span>Headless Commerce</span>
+        <span class="o">TypeScript</span>
+        <span>WebGL &amp; Shaders</span>
+        <span class="o">Tailwind CSS</span>
+        <span>GSAP Motion</span>
+        <span class="o">Stripe Payments</span>
+      </div>
+    </div>
+    <div class="marquee-row" data-dir="1">
+      <div class="marquee-track">
+        <span class="o">Bespoke Web Design</span>
+        <span>E-commerce Architecture</span>
+        <span class="o">UI/UX Systems</span>
+        <span>Conversion Engineering</span>
+        <span class="o">Mobile Optimization</span>
+        <span>Performance Audits</span>
+        <span class="o">Modern Redesigns</span>
+        <span>API Integrations</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ 4. SERVICES ============ -->
+  <section class="services" id="services" aria-label="Capabilities and Services">
+    <div class="services-header">
+      <span class="section-kicker">CAPABILITIES &amp; EXPERTISE</span>
+      <h2 class="services-head">End-to-End Digital Solutions for Ambitious Brands</h2>
+    </div>
+
+    <ul class="svc-list">
+      <!-- Service 01 -->
+      <li class="svc" data-service-id="strategic-web-design" data-cursor="Explore">
+        <a href="#contact" data-jump="contact" data-project-type="Strategic Website Design &amp; Development">
+          <div class="svc-main">
+            <span class="svc-num">01</span>
+            <span class="svc-name">Strategic Website Design &amp; Dev</span>
+          </div>
+          <div class="svc-detail">
+            <p class="svc-desc">Bespoke digital platforms, corporate websites, and interactive brand hubs engineered from scratch with clean semantic code, fluid animations, and robust CMS backends.</p>
+            <ul class="svc-tags">
+              <li>Custom Frontend &amp; Backend</li>
+              <li>60fps Motion Choreography</li>
+              <li>Semantic SEO Architecture</li>
+              <li>Sub-Second Load Speeds</li>
+            </ul>
+          </div>
+          <span class="svc-arrow" aria-hidden="true">→</span>
+        </a>
+      </li>
+
+      <!-- Service 02 -->
+      <li class="svc" data-service-id="ecommerce-dev" data-cursor="Explore">
+        <a href="#contact" data-jump="contact" data-project-type="E-commerce Development">
+          <div class="svc-main">
+            <span class="svc-num">02</span>
+            <span class="svc-name">E-commerce Development</span>
+          </div>
+          <div class="svc-detail">
+            <p class="svc-desc">Scalable, high-conversion online stores tailored to your business model. From bespoke Shopify Plus themes to headless commerce architectures with frictionless global checkouts.</p>
+            <ul class="svc-tags">
+              <li>Shopify Plus &amp; Headless</li>
+              <li>Frictionless Cart Drawers</li>
+              <li>Multi-Currency &amp; Global Tax</li>
+              <li>Inventory &amp; ERP Sync</li>
+            </ul>
+          </div>
+          <span class="svc-arrow" aria-hidden="true">→</span>
+        </a>
+      </li>
+
+      <!-- Service 03 -->
+      <li class="svc" data-service-id="ui-ux-design" data-cursor="Explore">
+        <a href="#contact" data-jump="contact" data-project-type="UI/UX Design">
+          <div class="svc-main">
+            <span class="svc-num">03</span>
+            <span class="svc-name">UI/UX Design</span>
+          </div>
+          <div class="svc-detail">
+            <p class="svc-desc">Research-backed user experience and visually arresting user interfaces. We map customer journeys, create comprehensive design systems, and prototype every interaction down to the microsecond.</p>
+            <ul class="svc-tags">
+              <li>Design Systems &amp; Tokens</li>
+              <li>Interactive Prototyping</li>
+              <li>User Journey Mapping</li>
+              <li>Conversion Funnel Audits</li>
+            </ul>
+          </div>
+          <span class="svc-arrow" aria-hidden="true">→</span>
+        </a>
+      </li>
+
+      <!-- Service 04 -->
+      <li class="svc" data-service-id="business-websites" data-cursor="Explore">
+        <a href="#contact" data-jump="contact" data-project-type="Business Websites">
+          <div class="svc-main">
+            <span class="svc-num">04</span>
+            <span class="svc-name">Business Websites</span>
+          </div>
+          <div class="svc-detail">
+            <p class="svc-desc">High-credibility corporate and commercial web platforms built to command authority, establish category leadership, and convert enterprise prospects into qualified inbound leads.</p>
+            <ul class="svc-tags">
+              <li>Brand Authority Presentation</li>
+              <li>Lead Capture &amp; CRM Sync</li>
+              <li>Interactive Case Studies</li>
+              <li>Enterprise Security &amp; Compliance</li>
+            </ul>
+          </div>
+          <span class="svc-arrow" aria-hidden="true">→</span>
+        </a>
+      </li>
+
+      <!-- Service 05 -->
+      <li class="svc" data-service-id="landing-page-development" data-cursor="Explore">
+        <a href="#contact" data-jump="contact" data-project-type="Landing Page Development">
+          <div class="svc-main">
+            <span class="svc-num">05</span>
+            <span class="svc-name">Landing Page Development</span>
+          </div>
+          <div class="svc-detail">
+            <p class="svc-desc">High-velocity campaign and product landing pages engineered specifically for paid acquisition, marketing launches, and maximum conversion rates.</p>
+            <ul class="svc-tags">
+              <li>A/B Testing Architecture</li>
+              <li>Lightning Fast Mobile Load</li>
+              <li>Persuasive Editorial Storytelling</li>
+              <li>Direct Attribution Tracking</li>
+            </ul>
+          </div>
+          <span class="svc-arrow" aria-hidden="true">→</span>
+        </a>
+      </li>
+
+      <!-- Service 06 -->
+      <li class="svc" data-service-id="web-application-development" data-cursor="Explore">
+        <a href="#contact" data-jump="contact" data-project-type="Web Application Development">
+          <div class="svc-main">
+            <span class="svc-num">06</span>
+            <span class="svc-name">Web Application Development</span>
+          </div>
+          <div class="svc-detail">
+            <p class="svc-desc">Modern full-stack web applications, portals, and software platforms engineered using modern frameworks with reactive state management and scalable APIs.</p>
+            <ul class="svc-tags">
+              <li>Next.js &amp; React Architecture</li>
+              <li>Secure Role-Based Auth</li>
+              <li>Real-Time Cloud Storage</li>
+              <li>RESTful &amp; GraphQL APIs</li>
+            </ul>
+          </div>
+          <span class="svc-arrow" aria-hidden="true">→</span>
+        </a>
+      </li>
+
+      <!-- Service 07 -->
+      <li class="svc" data-service-id="website-maintenance" data-cursor="Explore">
+        <a href="#contact" data-jump="contact" data-project-type="Website Maintenance">
+          <div class="svc-main">
+            <span class="svc-num">07</span>
+            <span class="svc-name">Website Maintenance</span>
+          </div>
+          <div class="svc-detail">
+            <p class="svc-desc">Proactive 24/7 technical monitoring, security patching, speed optimization, and regular feature updates to keep your digital platform operating at peak efficiency.</p>
+            <ul class="svc-tags">
+              <li>Core Web Vitals Audits</li>
+              <li>Security Patches &amp; Scanning</li>
+              <li>Daily Automated Backups</li>
+              <li>Priority SLA Support</li>
+            </ul>
+          </div>
+          <span class="svc-arrow" aria-hidden="true">→</span>
+        </a>
+      </li>
+
+      <!-- Service 08 -->
+      <li class="svc" data-service-id="custom-digital-solutions" data-cursor="Explore">
+        <a href="#contact" data-jump="contact" data-project-type="Custom Digital Solutions">
+          <div class="svc-main">
+            <span class="svc-num">08</span>
+            <span class="svc-name">Custom Digital Solutions</span>
+          </div>
+          <div class="svc-detail">
+            <p class="svc-desc">Tailored digital engineering to solve complex operational challenges, automate internal workflows, connect third-party platforms, and unlock new revenue streams.</p>
+            <ul class="svc-tags">
+              <li>Custom Workflow Automation</li>
+              <li>Third-Party API Integrations</li>
+              <li>Headless CMS &amp; Dashboards</li>
+              <li>Custom Analytics &amp; Reporting</li>
+            </ul>
+          </div>
+          <span class="svc-arrow" aria-hidden="true">→</span>
+        </a>
+      </li>
+    </ul>
+
+    <!-- Floating Interactive Service Preview -->
+    <div class="svc-preview" id="svcPreview" aria-hidden="true">
+      <div class="svc-preview-card">
+        <span class="spc-badge" id="spcBadge">TAVRO // CAPABILITY</span>
+        <h4 class="spc-name" id="spcName">Website Design &amp; Development</h4>
+        <p class="spc-copy" id="spcCopy">Engineered for brand distinction and commercial performance.</p>
+        <span class="spc-prompt">Click to initiate inquiry for this service →</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 5. OUR PROCESS ============ -->
+  <section class="process" id="process" aria-label="Our Four-Stage Workflow">
+    <div class="process-header">
+      <span class="section-kicker">METHODOLOGY &amp; WORKFLOW</span>
+      <h2 class="process-title">Our Four-Stage Workflow</h2>
+      <p class="process-subtitle">A systematic, transparent process engineered to move ambitious ideas from concept to global launch with precision.</p>
+    </div>
+
+    <div class="process-track">
+      <div class="process-progress-line" aria-hidden="true"><i id="processFill"></i></div>
+
+      <div class="process-grid">
+        <!-- Stage 01 -->
+        <article class="process-step" data-step="1">
+          <div class="step-indicator">
+            <span class="step-num">01</span>
+            <span class="step-dot"></span>
+          </div>
+          <div class="step-body">
+            <h3 class="step-name">Discover</h3>
+            <span class="step-role">Immersion, Audit &amp; Strategy</span>
+            <p class="step-desc">We deep-dive into your commercial objectives, customer psychology, brand positioning, and competitive landscape. We define clear KPIs, project scopes, and technical roadmaps before writing a single line of code.</p>
+            <ul class="step-milestones">
+              <li>Commercial &amp; Brand Audit</li>
+              <li>Competitor &amp; User Research</li>
+              <li>Technical Scoping &amp; Architecture</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Stage 02 -->
+        <article class="process-step" data-step="2">
+          <div class="step-indicator">
+            <span class="step-num">02</span>
+            <span class="step-dot"></span>
+          </div>
+          <div class="step-body">
+            <h3 class="step-name">Strategize</h3>
+            <span class="step-role">Architecture, UX &amp; Direction</span>
+            <p class="step-desc">We structure the narrative and user journey. Wireframing information hierarchy, drafting high-conversion page flows, and crafting art direction moodboards that establish your unique visual vocabulary.</p>
+            <ul class="step-milestones">
+              <li>Information Architecture &amp; User Journeys</li>
+              <li>Low-to-High Fidelity Wireframes</li>
+              <li>Creative Art Direction &amp; Moodboards</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Stage 03 -->
+        <article class="process-step" data-step="3">
+          <div class="step-indicator">
+            <span class="step-num">03</span>
+            <span class="step-dot"></span>
+          </div>
+          <div class="step-body">
+            <h3 class="step-name">Design &amp; Develop</h3>
+            <span class="step-role">Pixel-Perfect Craft &amp; Engineering</span>
+            <p class="step-desc">We transform blueprints into reality. Creating cohesive component design systems in Figma and coding clean, ultra-fast frontend and backend systems with fluid 60fps motion choreography.</p>
+            <ul class="step-milestones">
+              <li>Design Systems &amp; Component Libraries</li>
+              <li>Modern Custom Codebase (Next.js / Shopify)</li>
+              <li>Motion Choreography &amp; Micro-Interactions</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Stage 04 -->
+        <article class="process-step" data-step="4">
+          <div class="step-indicator">
+            <span class="step-num">04</span>
+            <span class="step-dot"></span>
+          </div>
+          <div class="step-body">
+            <h3 class="step-name">Launch &amp; Optimize</h3>
+            <span class="step-role">QA, Deployment &amp; Evolution</span>
+            <p class="step-desc">Rigorous cross-browser, cross-device testing and performance optimization ensure flawless reliability. We manage zero-downtime DNS deployment, integrate analytics tracking, and support ongoing commercial optimization.</p>
+            <ul class="step-milestones">
+              <li>Comprehensive Cross-Device QA &amp; WCAG AA Audit</li>
+              <li>Zero-Downtime Production Deployment</li>
+              <li>Post-Launch Analytics &amp; Conversion Optimization</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 6. THE PORTAL (CINEMATIC TRANSITION) ============ -->
+  <section class="portal" id="portal" aria-label="Portal to Contact">
+    <div class="portal-stage">
+      <canvas id="portalCanvas" aria-label="Cinematic light gateway animation"></canvas>
+      <div class="tunnel" aria-hidden="true"><div class="tunnel-cam"></div></div>
+      <div class="portal-shade" aria-hidden="true"></div>
+      
+      <p class="portal-line" data-w=".02,.2">Every ambitious brand begins with a decision.</p>
+      <p class="portal-line" data-w=".22,.44">To step outside the template and lead the category.</p>
+      <p class="portal-line" data-w=".48,.72">This is where your next chapter begins.</p>
+      
+      <div class="portal-cta">
+        <h2>Let's build a digital experience that moves your business forward.</h2>
+        <div class="portal-actions">
+          <a class="btn btn--solid magnet" href="#contact" data-jump="contact" data-cursor="Inquire">
+            <span>Start Your Project</span>
+          </a>
+          <button class="btn magnet" id="copyEmail" data-email="dineshreddy02a@gmail.com" data-cursor="Copy">
+            <span>Copy Direct Email</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 7. CONTACT / INQUIRY SECTION ============ -->
+  <footer class="contact" id="contact" aria-label="Project Inquiry and Studio Contact">
+    <div class="contact-top">
+      <span class="section-kicker">GET IN TOUCH</span>
+      <h2 class="contact-headline">Have an Ambitious Idea?<br><em>Let's Build It.</em></h2>
+      <p class="contact-lead">Tell us about your brand, your goals, and your timeline. We typically respond within 24 hours with an initial project perspective and proposal.</p>
+    </div>
+
+    <!-- Interactive Project Inquiry Form -->
+    <div class="contact-form-wrapper">
+      <form class="inquiry-form" id="inquiryForm" novalidate>
+        
+        <div class="form-row form-row--duo">
+          <!-- Name Field -->
+          <div class="form-field" id="field-name">
+            <label for="inputName">Your Full Name <span class="req">*</span></label>
+            <input type="text" id="inputName" name="name" placeholder="e.g. Elena Vance" required autocomplete="name">
+            <span class="field-error" aria-live="polite"></span>
+          </div>
+
+          <!-- Business / Brand Field -->
+          <div class="form-field" id="field-brand">
+            <label for="inputBrand">Business / Brand Name <span class="req">*</span></label>
+            <input type="text" id="inputBrand" name="brand" placeholder="e.g. Vance Goods" required autocomplete="organization">
+            <span class="field-error" aria-live="polite"></span>
+          </div>
+        </div>
+
+        <div class="form-row form-row--duo">
+          <!-- Email Field -->
+          <div class="form-field" id="field-email">
+            <label for="inputEmail">Work Email Address <span class="req">*</span></label>
+            <input type="email" id="inputEmail" name="email" placeholder="e.g. elena@vancegoods.com" required autocomplete="email">
+            <span class="field-error" aria-live="polite"></span>
+          </div>
+
+          <!-- WhatsApp Field -->
+          <div class="form-field" id="field-whatsapp">
+            <label for="inputWhatsapp">WhatsApp Phone Number <span class="req">*</span></label>
+            <input type="tel" id="inputWhatsapp" name="whatsapp" placeholder="e.g. +91 6301422287" required autocomplete="tel">
+            <span class="field-error" aria-live="polite"></span>
+          </div>
+        </div>
+
+        <!-- Project Type Selector -->
+        <div class="form-field form-field--pills" id="field-projectType">
+          <label>Project Type <span class="req">*</span></label>
+          <div class="chip-group" role="radiogroup" aria-label="Select Project Type">
+            <label class="chip">
+              <input type="radio" name="projectType" value="Strategic Website Design &amp; Development" checked>
+              <span>Website Design &amp; Dev</span>
+            </label>
+            <label class="chip">
+              <input type="radio" name="projectType" value="E-commerce Development">
+              <span>E-commerce Platform</span>
+            </label>
+            <label class="chip">
+              <input type="radio" name="projectType" value="UI/UX Design">
+              <span>UI/UX Design</span>
+            </label>
+            <label class="chip">
+              <input type="radio" name="projectType" value="Business Websites">
+              <span>Business Websites</span>
+            </label>
+            <label class="chip">
+              <input type="radio" name="projectType" value="Landing Page Development">
+              <span>Landing Pages</span>
+            </label>
+            <label class="chip">
+              <input type="radio" name="projectType" value="Web Application Development">
+              <span>Web Applications</span>
+            </label>
+            <label class="chip">
+              <input type="radio" name="projectType" value="Website Maintenance">
+              <span>Website Maintenance</span>
+            </label>
+            <label class="chip">
+              <input type="radio" name="projectType" value="Custom Digital Solutions">
+              <span>Digital Solutions</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Project Description -->
+        <div class="form-field" id="field-description">
+          <div class="label-row">
+            <label for="inputDescription">Project Description &amp; Scope <span class="req">*</span></label>
+            <span class="char-count" id="charCount">0 / 800</span>
+          </div>
+          <textarea id="inputDescription" name="description" rows="4" placeholder="Tell us about your brand, key objectives, target launch date, and any specific requirements..." required maxlength="800"></textarea>
+          <span class="field-error" aria-live="polite"></span>
+        </div>
+
+        <!-- Form Submit Bar -->
+        <div class="form-submit-row">
+          <button type="submit" class="btn btn--solid btn--submit magnet" id="submitBtn" data-cursor="Send">
+            <span class="btn-text">Submit Project Inquiry</span>
+            <span class="btn-spinner" aria-hidden="true"></span>
+          </button>
+          
+          <p class="form-disclaimer">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            Submissions trigger instant direct brief compilation and email dispatch. No spam, guaranteed.
+          </p>
+        </div>
+
+      </form>
+    </div>
+
+    <!-- Agency Direct Links & Contact Grid -->
+    <div class="contact-grid">
+      <div class="contact-col">
+        <span class="col-heading">Direct Inquiry</span>
+        <a class="contact-mail magnet" href="mailto:dineshreddy02a@gmail.com" data-cursor="Write">dineshreddy02a@gmail.com</a>
+        <a class="contact-wa magnet" href="https://wa.me/916301422287" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:8px; margin-top:10px; color:#27c93f; font-family:var(--mono); font-size:13px; text-decoration:none;">
+          <span>WhatsApp: +91 6301422287 ↗</span>
+        </a>
+        <p class="contact-meta-p">Inquiries reviewed daily by partners. Response within 24 hours.</p>
+      </div>
+
+      <div class="contact-col">
+        <span class="col-heading">Brand Philosophy</span>
+        <p style="font-family:var(--serif); font-size:17px; line-height:1.4; color:var(--bone); margin-top:8px;">
+          Strategic Web Design &amp; Development<br>
+          E-commerce &amp; Digital Innovation<br>
+          <em>Transforming Vision into Business Impact.<br>Built on Trust. Driven by Excellence.</em>
+        </p>
+        <p class="contact-time" style="margin-top:14px;">Studio Time: India <span id="clock">--:--</span> (IST)</p>
+      </div>
+
+      <div class="contact-col contact-col--right">
+        <span class="col-heading">Connect</span>
+        <ul class="contact-social">
+          <li><a href="https://www.instagram.com/tavrostudio.in/" target="_blank" rel="noopener noreferrer" data-cursor="Open">Instagram ↗</a></li>
+          <li><a href="https://www.linkedin.com/in/dinesh-reddy-pallem" target="_blank" rel="noopener noreferrer" data-cursor="Open">LinkedIn ↗</a></li>
+          <li><a href="https://github.com/dineshreddy0204" target="_blank" rel="noopener noreferrer" data-cursor="Open">GitHub ↗</a></li>
+          <li><a href="https://wa.me/916301422287" target="_blank" rel="noopener noreferrer" data-cursor="Open">WhatsApp ↗</a></li>
+          <li><a href="/admin" target="_blank" style="color:var(--accent-gold); opacity:0.85;">Admin Portal ↗</a></li>
+        </ul>
+        <button class="contact-again magnet" data-jump="top" data-cursor="Top">Back to Top ↑</button>
+      </div>
+    </div>
+
+    <div class="contact-bottom-bar">
+      <p class="contact-legal">© 2026 TAVRO STUDIO<sup>®</sup>. All rights reserved. International Premium Digital Agency.</p>
+      <div class="contact-sub-tags">
+        <span>PRECISION ARCHITECTURE</span>
+        <span>COMMERCE SYSTEMS</span>
+        <span>CRAFT &amp; SCALE</span>
+      </div>
+    </div>
+  </footer>
+
+</main>
+
+<!-- ============ MODALS ============ -->
+
+<!-- Inquiry Confirmation & Manifest Modal -->
+<div class="modal-backdrop" id="inquiryModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+  <div class="modal-window">
+    <div class="modal-header">
+      <div class="modal-icon-check" aria-hidden="true">✓</div>
+      <div>
+        <h3 id="modalTitle" class="modal-title">Project Inquiry Formatted &amp; Prepared</h3>
+        <span class="modal-sub">TAVRO STUDIO // Client Communication Protocol</span>
+      </div>
+      <button class="modal-close" id="modalCloseBtn" aria-label="Close dialog">×</button>
+    </div>
+
+    <div class="modal-body">
+      <p class="modal-notice">
+        Your inquiry details have been structured into a standardized agency brief and dispatched to <strong>dineshreddy02a@gmail.com</strong>.
+      </p>
+
+      <div class="modal-manifest-container">
+        <div class="manifest-header">
+          <span>TAVRO_INQUIRY_BRIEF.TXT</span>
+          <button class="btn-copy-manifest" id="btnCopyManifest" type="button">Copy Manifest</button>
+        </div>
+        <pre class="modal-manifest-text" id="modalManifestText"></pre>
+      </div>
+
+      <p class="modal-hint">
+        You can dispatch your brief instantly via WhatsApp or your system email client using the buttons below:
+      </p>
+    </div>
+
+    <div class="modal-footer" style="display:flex; gap:12px; flex-wrap:wrap; justify-content:flex-end;">
+      <a class="btn btn--solid" id="modalWhatsAppBtn" href="https://wa.me/916301422287" target="_blank" rel="noopener noreferrer" style="background:#25D366; color:#000; border:none; padding:10px 18px; font-weight:700;">
+        <span>Send via WhatsApp ↗</span>
+      </a>
+      <a class="btn btn--glass" id="modalEmailBtn" href="mailto:dineshreddy02a@gmail.com" style="padding:10px 18px;">
+        <span>Send via Email Client ↗</span>
+      </a>
+      <button class="btn btn--glass" id="modalConfirmBtn" style="padding:10px 18px;">Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
