@@ -1254,6 +1254,25 @@
         console.warn('[TAVRO STUDIO] Server inquiry save fallback:', err);
       });
 
+      // 2. Also save to browser LocalStorage so admin page sees inquiries anytime without localhost!
+      try {
+        const localInqs = JSON.parse(localStorage.getItem('tavro_inquiries_db') || '[]');
+        localInqs.unshift({
+          id: 'inq_' + Date.now(),
+          name,
+          brand,
+          email,
+          whatsapp,
+          projectType,
+          budget: 'To be discussed on discovery call',
+          description,
+          createdAt: new Date().toISOString()
+        });
+        localStorage.setItem('tavro_inquiries_db', JSON.stringify(localInqs));
+      } catch (storageErr) {
+        // ignore
+      }
+
       setTimeout(() => {
         submitBtn.classList.remove('is-submitting');
 
