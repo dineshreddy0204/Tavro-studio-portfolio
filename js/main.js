@@ -1413,6 +1413,32 @@ Protocol Status:       COMPILED & REGISTERED
     Sound.update();
   }
 
+  // Private Admin Access Shortcuts (For Studio Owner Only)
+  // 1. Secret keyboard shortcut: Ctrl + Shift + A (or Cmd + Shift + A)
+  window.addEventListener('keydown', (e) => {
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'A' || e.key === 'a')) {
+      e.preventDefault();
+      window.open('/admin', '_blank');
+    }
+  });
+
+  // 2. Secret triple-click on footer copyright notice
+  const legalMark = $('#legalMark');
+  if (legalMark) {
+    let clickCount = 0;
+    let clickTimer = null;
+    legalMark.addEventListener('click', () => {
+      clickCount++;
+      clearTimeout(clickTimer);
+      if (clickCount >= 3) {
+        clickCount = 0;
+        window.open('/admin', '_blank');
+      } else {
+        clickTimer = setTimeout(() => { clickCount = 0; }, 600);
+      }
+    });
+  }
+
   if (typeof window !== 'undefined' && typeof window.requestAnimationFrame === 'function') {
     window.requestAnimationFrame(loop);
   }
